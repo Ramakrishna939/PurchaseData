@@ -1,0 +1,27 @@
+create database banking_management_system;
+select * from movie_booking_management.customer_data;
+
+create database user_system;
+create database book_system;
+
+
+CREATE TABLE movie_booking_management.account_data (
+    id int primary key,
+    account_number varchar(255),
+    account_type varchar(255),
+    emp_id varchar(255)
+    
+);
+
+
+CREATE TABLE movie_booking_management.user (
+    id int primary key,
+    username varchar(255),
+    password varchar(255)
+);
+
+select * from movie_booking_management.user;
+
+select * from banking_management_system.customer_data;
+
+drop table movie_booking_management.account_data;

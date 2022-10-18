@@ -1,0 +1,41 @@
+create database user_management_db;
+create database user_prediction_db;
+
+CREATE TABLE `user_prediction_db`.`user_details` (
+  `user_id` INT NOT NULL AUTO_INCREMENT,
+  `user_name` VARCHAR(45) NOT NULL,
+  `user_state` VARCHAR(45) NOT NULL,
+  `user_emailId` VARCHAR(100) NOT NULL,
+  `user_age` INT  NOT NULL,
+  `user_country` VARCHAR(100) NOT NULL,
+  `user_loyaltyLevel` VARCHAR(100) NOT NULL,
+  `user_predictedPurchase` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`user_id`));
+
+
+CREATE TABLE `user_management_db`.`user_details` (
+  `user_id` INT NOT NULL AUTO_INCREMENT,
+  `user_name` VARCHAR(45) NOT NULL,
+  `user_state` VARCHAR(45) NOT NULL,
+  `user_emailId` VARCHAR(100) NOT NULL,
+  `user_age` INT  NOT NULL,
+  `user_country` VARCHAR(100) NOT NULL,
+  `user_loyaltyLevel` VARCHAR(100),
+  `user_predictedPurchase` VARCHAR(100),
+  PRIMARY KEY (`user_id`));
+  
+  
+  select * from `user_management_db`.`user_details`;
+  select * from  `user_prediction_db`.`user_details`;
+  DELETE FROM `user_prediction_db`.`user_details`;
+  select user_emailId from `user_management_db`.`user_details`;
+  
+  
+  CREATE TABLE `user_management_db`.`users_purchase_data` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `user_emailId` VARCHAR(100) NOT NULL,
+  `purchase_date` VARCHAR(100) NOT NULL,
+  `product_Id` VARCHAR(100),
+  PRIMARY KEY (`id`));
+  
+  select * from `user_management_db`.`users_purchase_data`;

@@ -1,0 +1,32 @@
+create database security_management;
+
+CREATE TABLE `security_management`.`user` (
+  `user_id` INT NOT NULL,
+  `username` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`user_id`));
+  
+  select * from `security_management`.`user`;
+  
+  CREATE TABLE `security_management`.`roles` (
+  `role_id` INT NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`role_id`));
+  select * from `security_management`.`roles`;
+  
+  CREATE TABLE `security_management`.`users_roles` (
+  `user_id` INT NOT NULL,
+  `role_id` INT NULL,
+  PRIMARY KEY (`user_id`));
+  select * from `security_management`.`users_roles`;
+  SELECT `roles`.`role_id`,
+    `roles`.`name`
+FROM `security_management`.`roles`;
+
+select users0_.user_id as user_id1_1_, users0_.password as 
+password2_1_, users0_.username as username3_1_ from user users0_ where users0_.username='user';
+
+select roles0_.user_id as user_id1_2_0_, roles0_.role_id as role_id2_2_0_, roles1_.role_id as role_id1_0_1_, roles1_.role_name as role_nam2_0_1_ from 
+users_roles roles0_ inner join roles roles1_ on roles0_.role_id=roles1_.role_id where roles0_.user_id=?;
+
+  select * from `user_management_db`.`users_purchase_data`;
